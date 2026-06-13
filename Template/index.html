@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Healthcare AI - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>AI-Powered Smart Healthcare</h1>
+    <p>Early Diagnosis of Cardiovascular Illness</p>
+    <nav>
+        <a href="/" class="active">Home</a>
+        <a href="/diagnosis">Diagnosis</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <img src="https://images.pexels.com/photos/3938022/pexels-photo-3938022.jpeg" class="hero-img" alt="Healthcare AI Background">
+    
+    <div class="hero-text">
+        <h2>Revolutionizing Heart Health with AI</h2>
+        <p>Using advanced Machine Learning to detect cardiovascular patterns early. Smart, Fast, and Accurate—because early detection saves lives.</p>
+        <a href="/diagnosis" class="btn">Try Diagnosis Tool</a>
+    </div>
+</section>
+
+<section class="content">
+    <h2>Why AI for Cardiovascular Disease?</h2>
+    <p>Cardiovascular diseases are the leading cause of death globally. Our system leverages modern technology to provide preliminary insights.</p>
+    
+    <div class="cards">
+        <div class="card">
+            <img src="https://images.pexels.com/photos/7578808/pexels-photo-7578808.jpeg" alt="Accuracy">
+            <h3>Accurate Predictions</h3>
+            <p>Our Random Forest model achieves high precision by analyzing complex medical datasets.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.pexels.com/photos/7089020/pexels-photo-7089020.jpeg" alt="Monitoring">
+            <h3>Smart Monitoring</h3>
+            <p>Designed for real-time analysis, allowing healthcare providers to act before a crisis occurs.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.pexels.com/photos/8442448/pexels-photo-8442448.jpeg" alt="Data Driven">
+            <h3>Data-Driven Insights</h3>
+            <p>Eliminating human error by relying on evidence-based clinical metrics and patterns.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2026 Smart Healthcare AI. All Rights Reserved.
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
