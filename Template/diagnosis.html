@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Diagnosis - Smart Healthcare AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>AI-Powered Smart Healthcare</h1>
+    <p>Early Diagnosis of Cardiovascular Illness</p>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/diagnosis" class="active">Diagnosis</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+    </nav>
+</header>
+
+<section class="content">
+    <div class="container">
+        <h2>Heart Disease Prediction Tool</h2>
+        <p>Please enter the patient's clinical metrics below. Our AI model will analyze these variables to estimate cardiovascular risk.</p>
+        
+        <form id="predictForm">
+            
+            <label for="age">Age (years):</label>
+            <input type="number" id="age" name="age" placeholder="e.g., 45" required>
+
+            <label for="sex">Sex:</label>
+            <select id="sex" name="sex">
+                <option value="1">Male (1)</option>
+                <option value="0">Female (0)</option>
+            </select>
+
+            <label for="cp">Chest Pain Type (0-3):</label>
+            <input type="number" id="cp" name="cp" min="0" max="3" placeholder="0: Typical, 1: Atypical, 2: Non-anginal, 3: Asymptomatic" required>
+
+            <label for="trestbps">Resting Blood Pressure (mm Hg):</label>
+            <input type="number" id="trestbps" name="trestbps" placeholder="e.g., 120" required>
+
+            <label for="chol">Serum Cholesterol (mg/dl):</label>
+            <input type="number" id="chol" name="chol" placeholder="e.g., 240" required>
+
+            <label for="fbs">Fasting Blood Sugar > 120 mg/dl:</label>
+            <select id="fbs" name="fbs">
+                <option value="0">False (0)</option>
+                <option value="1">True (1)</option>
+            </select>
+
+            <label for="restecg">Resting ECG Results (0-2):</label>
+            <input type="number" id="restecg" name="restecg" min="0" max="2" required>
+
+            <label for="thalach">Max Heart Rate Achieved:</label>
+            <input type="number" id="thalach" name="thalach" placeholder="e.g., 150" required>
+
+            <label for="exang">Exercise Induced Angina:</label>
+            <select id="exang" name="exang">
+                <option value="0">No (0)</option>
+                <option value="1">Yes (1)</option>
+            </select>
+
+            <label for="oldpeak">ST Depression (Induced by Exercise):</label>
+            <input type="number" id="oldpeak" step="0.1" name="oldpeak" placeholder="e.g., 1.2" required>
+
+            <label for="slope">Slope of Peak Exercise ST Segment (0-2):</label>
+            <input type="number" id="slope" name="slope" min="0" max="2" required>
+
+            <label for="ca">Major Vessels Colored by Flourosopy (0-3):</label>
+            <input type="number" id="ca" name="ca" min="0" max="3" required>
+
+            <label for="thal">Thalassemia (1: Normal, 2: Fixed, 3: Reversable):</label>
+            <input type="number" id="thal" name="thal" min="1" max="3" required>
+
+            <div style="margin-top: 30px; text-align: center;">
+                <button type="submit" class="btn">Predict Now</button>
+            </div>
+        </form>
+
+        <div id="result" style="margin-top: 25px; display: none; text-align: center;"></div>
+    </div>
+</section>
+
+<footer>
+    © 2026 Smart Healthcare AI. All Rights Reserved.
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
